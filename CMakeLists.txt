@@ -151,10 +151,8 @@ add_definitions(
                )
 
 
-
 add_library   ( gst-gles++${GST_GLES_VERSION}      MODULE  ${GST_GLES_SRC}     )
 
-
 target_link_libraries( gst-gles++${GST_GLES_VERSION}   ${GST_GLES_LIBRARIES} ${GL_LIBRARIES} )
-target_link_libraries( gst-gles++${GST_GLES_VERSION}   ${CMAKE_DL_LIBS}         )
+target_link_libraries( gst-gles++${GST_GLES_VERSION}   ${CMAKE_DL_LIBS}                      )
 
