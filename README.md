@@ -16,4 +16,5 @@ Here a list with all dependecies and their use
  - **GStreamer**  gStreamer SDK, used to implements video sink classes
  - **libgles++**  had declaration for GLTexture used to exchange video frames with application level.
  
+ToDo
 
