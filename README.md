@@ -1,7 +1,7 @@
 gst-gles++
 ==========
 
-This library is a video sink plug-in intended to be used with GStreamer pipeline.
+This library is a video sink plug-in intended to be used with GStreamer pipeline in order to allow 2D and 3D video mapping over gles++ surfaces.
 gst-gles++ has been build on the above of many other libraries and many others will be introduced, but each library used until now:
  - is open source and under a license that allow commercial use
  - is portable through OSs and at least linux and windows are supported
