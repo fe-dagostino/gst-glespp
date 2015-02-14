@@ -16,6 +16,7 @@ include_directories( ${CMAKE_INSTALL_PREFIX}/include/libgles++ )
 find_package( GLIB      REQUIRED )
 find_package( GObject   REQUIRED )
 find_package( GStreamer REQUIRED )
+find_package( LibXml2   REQUIRED )
 
 
 include_directories( ${GLIB_INCLUDE_DIRS}            )
@@ -23,6 +24,7 @@ include_directories( ${GOBJECT_INCLUDE_DIR}          )
 include_directories( ${GSTREAMER_BASE_INCLUDE_DIRS}  )
 include_directories( ${GSTREAMER_INCLUDE_DIRS}       )
 include_directories( ${GSTREAMER_VIDEO_INCLUDE_DIRS} )
+include_directories( ${LIBXML2_INCLUDE_DIR}          )
 
 include_directories( ../gscore/include/plugin/ )
 include_directories( ./include/ )
@@ -42,7 +44,7 @@ IF( CMAKE_BUILD_TYPE STREQUAL "Debug" )
         -3.1.0-debug
      )
   set(  LIBGLES_VER
-        -0.1.0-debug
+        -0.2.0-debug
      )
   set(  GST_GLES_VERSION
         -1.0.0-debug
@@ -52,7 +54,7 @@ ELSE()
         -3.1.0
      )
   set(  LIBGLES_VER
-        -0.1.0
+        -0.2.0
      )
   set(  GST_GLES_VERSION
         -1.0.0
@@ -151,8 +153,8 @@ add_definitions(
                )
 
 
-add_library   ( gst-gles++${GST_GLES_VERSION}      MODULE  ${GST_GLES_SRC}     )
+add_library   ( gstgles++      MODULE  ${GST_GLES_SRC}     )
 
-target_link_libraries( gst-gles++${GST_GLES_VERSION}   ${GST_GLES_LIBRARIES} ${GL_LIBRARIES} )
-target_link_libraries( gst-gles++${GST_GLES_VERSION}   ${CMAKE_DL_LIBS}                      )
+target_link_libraries( gstgles++   ${GST_GLES_LIBRARIES} ${GL_LIBRARIES} )
+target_link_libraries( gstgles++   ${CMAKE_DL_LIBS}                      )
 
