@@ -1,0 +1,21 @@
+Update /etc/apt/sources.list with the following repo
+----------------------------------------------------
+
+# wheezy backports
+deb http://http.debian.net/debian wheezy-backports main
+
+Install required dependency
+---------------------------
+
+su -c 'apt-get install liborc-0.4-0=1:0.4.19-1~bpo70+1'
+
+Install gstreamer
+------------------
+
+sudo apt-get install libgstreamer-plugins-base1.0-0 libgstreamer-plugins-base1.0-dev
+sudo apt-get install gir1.2-gstreamer-1.0 libgstreamer1.0-0 libgstreamer1.0-dev
+sudo apt-get install gstreamer1.0-tools
+sudo apt-get install gstreamer1.0-plugins-base
+sudo apt-get install gstreamer1.0-plugins-base-apps
+sudo apt-get install gstreamer1.0-plugins-good
+
