@@ -46,7 +46,7 @@ static gboolean plugin_init (GstPlugin * plugin)
 GST_PLUGIN_DEFINE (
     GST_VERSION_MAJOR,
     GST_VERSION_MINOR,
-    gles++sink,
+    glesppsink,
     "libgles++ sink element",
     plugin_init,
     VERSION,
